@@ -4,37 +4,21 @@
 #
 Name     : R-broom
 Version  : 0.4.3
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/broom_0.4.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.4.3.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Data Frames
 Group    : Development/Tools
 License  : MIT
-Requires: R-AER
-Requires: R-Lahman
-Requires: R-brms
-Requires: R-btergm
-Requires: R-dplyr
-Requires: R-ggplot2
-Requires: R-lme4
-Requires: R-muhaz
-Requires: R-plyr
-Requires: R-psych
-Requires: R-reshape2
-Requires: R-rstanarm
-Requires: R-tidyr
 BuildRequires : R-AER
 BuildRequires : R-Lahman
 BuildRequires : R-brms
-BuildRequires : R-btergm
 BuildRequires : R-dplyr
 BuildRequires : R-ggplot2
 BuildRequires : R-lme4
-BuildRequires : R-muhaz
 BuildRequires : R-plyr
 BuildRequires : R-psych
 BuildRequires : R-reshape2
-BuildRequires : R-rstanarm
 BuildRequires : R-tidyr
 BuildRequires : clr-R-helpers
 
@@ -50,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521246074
+export SOURCE_DATE_EPOCH=1521246520
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521246074
+export SOURCE_DATE_EPOCH=1521246520
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
