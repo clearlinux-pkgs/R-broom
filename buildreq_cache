@@ -5,3 +5,8 @@ R-mclust
 R-lfe
 R-joineRML
 R-poLCA
+R-speedglm
+R-lsmeans
+R-geepack
+R-binGroup
+R-emmeans

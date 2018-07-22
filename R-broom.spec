@@ -4,22 +4,29 @@
 #
 Name     : R-broom
 Version  : 0.5.0
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.0.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
 Group    : Development/Tools
 License  : MIT
-Requires: R-joineRML
-Requires: R-poLCA
+Requires: R-binGroup
+Requires: R-emmeans
+Requires: R-geepack
+Requires: R-lsmeans
+Requires: R-speedglm
 BuildRequires : R-AER
 BuildRequires : R-Lahman
+BuildRequires : R-binGroup
 BuildRequires : R-brms
 BuildRequires : R-dplyr
+BuildRequires : R-emmeans
+BuildRequires : R-geepack
 BuildRequires : R-ggplot2
 BuildRequires : R-joineRML
 BuildRequires : R-lfe
 BuildRequires : R-lme4
+BuildRequires : R-lsmeans
 BuildRequires : R-mclust
 BuildRequires : R-plyr
 BuildRequires : R-poLCA
@@ -27,6 +34,7 @@ BuildRequires : R-psych
 BuildRequires : R-reshape2
 BuildRequires : R-robust
 BuildRequires : R-rsample
+BuildRequires : R-speedglm
 BuildRequires : R-tidyr
 BuildRequires : clr-R-helpers
 
@@ -48,11 +56,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532215264
+export SOURCE_DATE_EPOCH=1532275020
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532215264
+export SOURCE_DATE_EPOCH=1532275020
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
