@@ -4,17 +4,12 @@
 #
 Name     : R-broom
 Version  : 0.5.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.0.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
 Group    : Development/Tools
 License  : MIT
-Requires: R-binGroup
-Requires: R-emmeans
-Requires: R-geepack
-Requires: R-lsmeans
-Requires: R-speedglm
 BuildRequires : R-AER
 BuildRequires : R-Lahman
 BuildRequires : R-binGroup
@@ -56,11 +51,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532275020
+export SOURCE_DATE_EPOCH=1532790595
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532275020
+export SOURCE_DATE_EPOCH=1532790595
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
