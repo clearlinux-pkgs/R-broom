@@ -4,7 +4,7 @@
 #
 Name     : R-broom
 Version  : 0.5.1
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.1.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
