@@ -1,9 +1,12 @@
 0.5.1
+R-betareg
 R-binGroup
 R-emmeans
 R-gam
 R-geepack
 R-generics
+R-glmnet
+R-highr
 R-joineRML
 R-lfe
 R-lsmeans
