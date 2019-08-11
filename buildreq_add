@@ -1,12 +1,2 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-R-AER
-R-Lahman
-R-brms
-R-dplyr
-R-ggplot2
-R-lme4
-R-plyr
-R-psych
-R-reshape2
-R-tidyr

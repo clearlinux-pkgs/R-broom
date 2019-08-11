@@ -4,57 +4,50 @@
 #
 Name     : R-broom
 Version  : 0.5.2
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.2.tar.gz
-Summary  : Convert statistical analysis objects into tidy data frames.
+Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
 Group    : Development/Tools
 License  : MIT
+Requires: R-backports
 Requires: R-betareg
-Requires: R-biglm
-Requires: R-binGroup
-Requires: R-emmeans
-Requires: R-gam
-Requires: R-geepack
+Requires: R-brms
+Requires: R-dplyr
 Requires: R-generics
-Requires: R-glmnet
-Requires: R-joineRML
-Requires: R-lfe
-Requires: R-lsmeans
+Requires: R-ggplot2
 Requires: R-mclust
-Requires: R-poLCA
-Requires: R-robust
-Requires: R-speedglm
-BuildRequires : R-AER
-BuildRequires : R-Lahman
+Requires: R-purrr
+Requires: R-reshape2
+Requires: R-rsample
+Requires: R-stringr
+Requires: R-tibble
+Requires: R-tidyr
+BuildRequires : R-backports
 BuildRequires : R-betareg
-BuildRequires : R-biglm
-BuildRequires : R-binGroup
 BuildRequires : R-brms
 BuildRequires : R-dplyr
-BuildRequires : R-emmeans
-BuildRequires : R-gam
-BuildRequires : R-geepack
 BuildRequires : R-generics
 BuildRequires : R-ggplot2
-BuildRequires : R-glmnet
-BuildRequires : R-joineRML
-BuildRequires : R-lfe
-BuildRequires : R-lme4
-BuildRequires : R-lsmeans
 BuildRequires : R-mclust
-BuildRequires : R-plyr
-BuildRequires : R-poLCA
-BuildRequires : R-psych
+BuildRequires : R-purrr
 BuildRequires : R-reshape2
-BuildRequires : R-robust
-BuildRequires : R-speedglm
+BuildRequires : R-rsample
+BuildRequires : R-stringr
+BuildRequires : R-tibble
 BuildRequires : R-tidyr
 BuildRequires : buildreq-R
 
 %description
-broom <img src="man/figures/logo.png" align="right" width="100" height="100" />
-===============================================================================
+objects in tidy tibbles. This makes it easy to report results, create
+    plots and consistently work with large numbers of models at once.
+    Broom provides three verbs that each provide different types of
+    information about a model. tidy() summarizes information about model
+    components such as coefficients of a regression. glance() reports
+    information about an entire model, such as goodness of fit measures
+    like AIC and BIC. augment() adds information about individual
+    observations to a dataset, such as fitted values or influence
+    measures.
 
 %prep
 %setup -q -c -n broom
@@ -63,13 +56,13 @@ broom <img src="man/figures/logo.png" align="right" width="100" height="100" />
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1554695874
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1565501503
 
 %install
-export SOURCE_DATE_EPOCH=1554695874
+export SOURCE_DATE_EPOCH=1565501503
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -98,7 +91,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
