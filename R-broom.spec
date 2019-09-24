@@ -4,35 +4,25 @@
 #
 Name     : R-broom
 Version  : 0.5.2
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.2.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
 Group    : Development/Tools
 License  : MIT
 Requires: R-backports
-Requires: R-betareg
-Requires: R-brms
 Requires: R-dplyr
 Requires: R-generics
-Requires: R-ggplot2
-Requires: R-mclust
 Requires: R-purrr
 Requires: R-reshape2
-Requires: R-rsample
 Requires: R-stringr
 Requires: R-tibble
 Requires: R-tidyr
 BuildRequires : R-backports
-BuildRequires : R-betareg
-BuildRequires : R-brms
 BuildRequires : R-dplyr
 BuildRequires : R-generics
-BuildRequires : R-ggplot2
-BuildRequires : R-mclust
 BuildRequires : R-purrr
 BuildRequires : R-reshape2
-BuildRequires : R-rsample
 BuildRequires : R-stringr
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
@@ -57,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565501503
+export SOURCE_DATE_EPOCH=1569286002
 
 %install
-export SOURCE_DATE_EPOCH=1565501503
+export SOURCE_DATE_EPOCH=1569286002
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
