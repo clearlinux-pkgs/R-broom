@@ -4,7 +4,7 @@
 #
 Name     : R-broom
 Version  : 0.5.6
-Release  : 38
+Release  : 39
 URL      : https://cran.r-project.org/src/contrib/broom_0.5.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_0.5.6.tar.gz
 Summary  : Convert Statistical Analysis Objects into Tidy Tibbles
@@ -29,25 +29,34 @@ BuildRequires : R-tidyr
 BuildRequires : buildreq-R
 
 %description
-# broom <img src="man/figures/logo.png" align="right" width="100" height="100" />
+objects in tidy tibbles. This makes it easy to report results, create
+    plots and consistently work with large numbers of models at once.
+    Broom provides three verbs that each provide different types of
+    information about a model. tidy() summarizes information about model
+    components such as coefficients of a regression. glance() reports
+    information about an entire model, such as goodness of fit measures
+    like AIC and BIC. augment() adds information about individual
+    observations to a dataset, such as fitted values or influence
+    measures.
 
 %prep
 %setup -q -c -n broom
+cd %{_builddir}/broom
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1587409330
+export SOURCE_DATE_EPOCH=1589776606
 
 %install
-export SOURCE_DATE_EPOCH=1587409330
+export SOURCE_DATE_EPOCH=1589776606
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
