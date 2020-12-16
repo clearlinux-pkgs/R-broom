@@ -1,5 +1,7 @@
 # This file contains recursive sources that require this package
+R-arsenal
 R-geepack
+R-mice
 R-modelr
 R-rsample
 R-tidyverse
