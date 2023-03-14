@@ -4,7 +4,7 @@
 #
 Name     : R-broom
 Version  : 1.0.4
-Release  : 74
+Release  : 75
 URL      : https://cran.r-project.org/src/contrib/broom_1.0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom_1.0.4.tar.gz
 Summary  : Convert Statistical Objects into Tidy Tibbles
@@ -34,9 +34,6 @@ BuildRequires : R-stringr
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 objects in tidy tibbles. This makes it easy to report results, create
@@ -58,10 +55,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1678724033
+export SOURCE_DATE_EPOCH=1678811603
 
 %install
-export SOURCE_DATE_EPOCH=1678724033
+export SOURCE_DATE_EPOCH=1678811603
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
