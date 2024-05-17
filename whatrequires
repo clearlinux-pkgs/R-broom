@@ -1,8 +1,11 @@
 # This file contains recursive sources that require this package
 R-arsenal
+R-broom.helpers
 R-broom.mixed
 R-geepack
 R-mice
 R-modelr
 R-pbkrtest
+R-rstatix
+R-survminer
 R-tidyverse
